@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name": "Will Byers",
+      "status": "Alive",
+      "born": "March 22, 1971",
+      "age": 12,
+      "gender": "Male",
+      "playedBy": "Noah Schnapp",
+      "aliases": [ "Will the Wise", "Zombie Boy", "The Boy Who Came Back to Life", "The Spy", "Cleric" ],
+      "family": [ "Jonathan Byers (brother)", "Joyce Byers (mother)", "Lonnie Byers (father)", "Darlene (great-aunt)", "Eleven (friend; housemate)" ],
+      "relationships": [ "Mike Wheeler (best friend)", "Dustin Henderson (best friend)", "Lucas Sinclair (best friend)", "Max (friend)", "Troy (enemy)", "James (enemy)", "Bob Newby ✝ (friend/father figure)" ]
+   }, 
+   {
+      "id": 2,
+      "name": "Joyce Byers",
+      "status": "Alive",
+      "born": "1940s",
+      "age": "Late 30s",
+      "gender": "Female",
+      "playedBy": "Winona Ryder",
+      "aliases": [],
+      "family": [ "Will Byers (son)", "Jonathan Byers (son)", "Darlene (aunt)", "Eleven (friend/daughter figure)" ],
+      "relationships": [ "Jim Hopper ✝ (best friend, love interest)", "Bob Newby ✝ (former boyfriend)", "Alexei ✝ (friend)", "Murray Bauman (friend)", "Karen Wheeler (friend)", "Scott Clarke (friend)", "Martin Brenner (enemy)", "Grigori ✝ (enemy)" ]
+   },
+   {
+      
+   }
+]
+
