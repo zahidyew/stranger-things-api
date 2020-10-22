@@ -7,6 +7,11 @@ router.get('/', (req, res) => {
    res.json(charactersData)
 })
 
+router.get('/:name', (req, res) => {
+   const data = charactersData.filter( item =>  item.name.toLowerCase().includes(req.params.name.toLowerCase()))      
+   res.json (data)
+})
+
 module.exports = router
 
 /* {

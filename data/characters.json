@@ -4,8 +4,9 @@
       "name": "Will Byers",
       "status": "Alive",
       "born": "March 22, 1971",
-      "age": 12,
+      "age": "12",
       "gender": "Male",
+      "occupation": "Student",
       "playedBy": "Noah Schnapp",
       "aliases": [ "Will the Wise", "Zombie Boy", "The Boy Who Came Back to Life", "The Spy", "Cleric" ],
       "family": [ "Jonathan Byers (brother)", "Joyce Byers (mother)", "Lonnie Byers (father)", "Darlene (great-aunt)", "Eleven (friend; housemate)" ],
@@ -18,13 +19,49 @@
       "born": "1940s",
       "age": "Late 30s",
       "gender": "Female",
+      "occupation": "Retail clerk",
       "playedBy": "Winona Ryder",
       "aliases": [],
       "family": [ "Will Byers (son)", "Jonathan Byers (son)", "Darlene (aunt)", "Eleven (friend/daughter figure)" ],
       "relationships": [ "Jim Hopper ✝ (best friend, love interest)", "Bob Newby ✝ (former boyfriend)", "Alexei ✝ (friend)", "Murray Bauman (friend)", "Karen Wheeler (friend)", "Scott Clarke (friend)", "Martin Brenner (enemy)", "Grigori ✝ (enemy)" ]
-   },
+   }, 
    {
-      
+      "id": 3,
+      "name": "Jim Hopper",
+      "status": "Alive",
+      "born": "1942",
+      "age": "41",
+      "gender": "Male",
+      "occupation": "Police Chief",
+      "playedBy": "David Harbour",
+      "aliases": ["Chief Hopper", "Hop", "Chief", "Antique Chariot", "Fat Rambo"],
+      "family": ["Sara Hopper † (daughter)", "Eleven (adopted daughter"],
+      "relationships": ["Joyce Byers (friend, love interest)", "Benny Hammond † (friend)", "Bob Newby † (former classmate/friend)", "Powell & Callahan (friends and co-workers)", "Murray Bauman (friend)", "Grigori (enemy)", "Martin Brenner (enemy)"]
+   }, 
+   {
+      "id": 4,
+      "name": "Mike Wheeler", 
+      "status": "Alive", 
+      "born": "1971",
+      "age": "12",
+      "gender": "Male",
+      "occupation": "Student",
+      "playedBy": "Finn Wolfhard",
+      "aliases": ["Dungeon Master", "Paladin"],
+      "family": ["Karen Wheeler (mother)", "Ted Wheeler (father)", "Nancy Wheeler (sister)", "Holly Wheeler (sister)"],
+      "relationships": ["Eleven (girlfriend)", "Will Byers (best friend)", "Lucas Sinclair (best friend)", "Dustin Henderson (best friend)", "Max (friend)", "Troy (enemy)", "James (enemy)"]
+   }, 
+   {
+      "id": 5,
+      "name": "Eleven",
+      "status": "Alive",
+      "born": "1971",
+      "age": "12",
+      "gender": "Female",
+      "occupation": "Lab test subject (formerly)",
+      "playedBy": "Millie Bobby Brown",
+      "aliases": ["El", "011", "Jane Ives", "Jane Hopper", "The Weirdo", "Eleanor", "Shirley Temple", "Mage"],
+      "family": ["Joyce Byers (friend/mother figure; guardian)", "Jim Hopper † (adoptive father)", "Sara Hopper † (adoptive sister)", "Terry Ives (biological mother)", "Becky Ives (aunt)", "Kali Prasad (spiritual sister/fellow Hawkins Lab test subject)"],
+      "relationships": ["Mike Wheeler (boyfriend)", "Dustin Henderson (best friend)", "Lucas Sinclair (best friend)", "Max Mayfield (best friend)", "Will Byers (friend; housemate)", "Jonathan Byers (friend; housemate)", "Benny Hammond † (benefactor)", "Martin Brenner (former father figure/captor)"]
    }
 ]
-
