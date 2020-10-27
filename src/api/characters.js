@@ -1,5 +1,6 @@
 const { Router } = require('express')
-const charactersData = require('../../data/characters')
+const charactersData = require('../../data/character')
+//const charactersData = require('../scraper/test')
 
 const router = Router()
 
@@ -13,16 +14,3 @@ router.get('/:name', (req, res) => {
 })
 
 module.exports = router
-
-/* {
-      "id": 2,
-      "name": " ",
-      "status": " ",
-      "born": " ",
-      "age": " ",
-      "gender": " ",
-      "aliases": " ",
-      "family": " ",
-      "relationships": " ",
-      "playedBy": " "
-} */

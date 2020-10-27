@@ -2,8 +2,9 @@ const request = require('superagent');
 const { parse } = require('node-html-parser');
 const { camelCase } = require('lodash')
 const fs = require("fs")
+const characterData = require("../../data/character")
 
-let details = new Object()
+//let details = new Object()
 
 async function scraper(character) {
    //const character = "Mike_Wheeler"
@@ -43,7 +44,7 @@ async function scrapeData(character) {
    const name = await getName(parseData)
    const picture = await getPicture(parseData)
 
-   
+   let details = new Object()
    details['name'] = name.toString()
    details['picture'] = picture
 
@@ -118,6 +119,14 @@ async function scrapeData(character) {
    console.log(details)
 
    //return details
+
+   characterData.push(details)
+
+   fs.writeFile("./data/character.json", JSON.stringify(characterData), err => {
+      if (err) throw err
+
+      console.log("Done")
+   })
    
 }
 
