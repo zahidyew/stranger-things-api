@@ -1,10 +1,13 @@
 const request = require('superagent');
 const { parse } = require('node-html-parser');
 const { camelCase } = require('lodash')
+const fs = require("fs")
 
-async function scraper() {
+let details = new Object()
+
+async function scraper(character) {
    //const character = "Mike_Wheeler"
-   const character = "Dustin_Henderson"
+   //const character = "Dustin_Henderson"
    //const character = "Will_Byers"
    const url = 'https://strangerthings.fandom.com/wiki/' + character
 
@@ -31,8 +34,8 @@ async function getPicture(html) {
    return html.querySelectorAll('.pi-image-thumbnail')[0].getAttribute('src')
 }
 
-async function scrapeData() {
-   const parseData = await scraper()
+async function scrapeData(character) {
+   const parseData = await scraper(character)
 
    const summaryLabels = await getSummaryLabels(parseData)
    const summaryValues = await getSummaryValues(parseData)
@@ -40,7 +43,7 @@ async function scrapeData() {
    const name = await getName(parseData)
    const picture = await getPicture(parseData)
 
-   let details = new Object()
+   
    details['name'] = name.toString()
    details['picture'] = picture
 
@@ -64,7 +67,7 @@ async function scrapeData() {
             details[label] = value.substring(0,2)
          } 
          else if (label == 'aliases') {            
-            const reformatted = structure.split('<br>').map(str => reformat(str).trim())
+            const reformatted = structure.split('<br>').map(str => removeTags(str).trim())
             details[label] = reformatted
          } 
          else if (label == 'relationshipStatus') {
@@ -83,13 +86,25 @@ async function scrapeData() {
             details[label] = reformatted
          } 
          else if (label == 'occupation') {
-            details[label] = value
+            if (structure.includes('<br>')) {
+               const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
+               details[label] = reformatted
+            }
+            else {
+               details[label] = value
+            }
          } 
          else if (label == 'gender') {
             details[label] = value
          } 
          else if (label == 'portrayedBy') {
-            details[label] = value
+            if (structure.includes('<br>')) {
+               const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
+               details[label] = reformatted
+            }
+            else {
+               details[label] = value
+            }
          } 
          else {
             //console.log(label + " null")
@@ -99,11 +114,14 @@ async function scrapeData() {
 
    if(!details.hasOwnProperty('relationshipStatus')) {
       details['relationshipStatus'] = 'undefined'
-   } //aliases, family, 
+   } //aliases, family, affiliation
    console.log(details)
+
+   //return details
+   
 }
 
-function reformat(str) {
+function removeTags(str) {
    str = str.replace(/[""|”]/g, "")
    str = str.replace('<p>', "")
    str = str.replace('</p>', "")
@@ -115,7 +133,7 @@ function reformat(str) {
 }
 
 function removeHref(str) {
-   str = reformat(str)
+   str = removeTags(str)
    
    const start = str.indexOf('<a')
    const end = str.indexOf('>')
@@ -126,4 +144,46 @@ function removeHref(str) {
    return str
 }
    
-scrapeData();
+//scrapeData();
+
+
+async function getCharactersName() {
+   const url = 'https://strangerthings.fandom.com/wiki/Stranger_Things_Wiki'
+
+   const response = await request.get(url)
+   const data = await response.text
+   const parseData = await parse(data)
+   const names = await scrapeName(parseData)
+
+   //let aaa = 
+   await names.map(name => scrapeData(name))//console.log("is: " + name))
+
+
+   //console.log(aaa)
+
+   /* fs.writeFile("./src/scraper/test.json", JSON.stringify(details), err => {
+      if (err) throw err
+
+      console.log("Done")
+   })  */
+}
+
+async function scrapeName(html) {
+   return html.querySelectorAll('div.portal div.wikia-gallery-row div.wikia-gallery-item div.thumb div.gallery-image-wrapper').map(node => getTitle(node));
+}
+
+function getTitle(node) {
+   let str = node.innerHTML
+
+   const n = str.indexOf('title')
+   str = str.substring(n + 7) //, n + str.indexOf('"'))
+
+   const l = str.indexOf('(')
+   str = str.substring(0, l-1).trim()
+
+   //console.log(str + "\n")
+   //console.log(n)
+   return str
+}
+
+getCharactersName()
