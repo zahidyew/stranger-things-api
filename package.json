@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
-    "scrape": "nodemon ./src/scraper/scraper.js",
-    "getdata": "node ./src/scraper/scraper.js"
+    "scrapeTest": "nodemon ./src/scraper/scraper.js",
+    "scrape": "node ./src/scraper/scraper.js"
   },
   "author": "zahidyew",
   "license": "ISC",

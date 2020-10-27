@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const charactersData = require('../../data/character')
-//const charactersData = require('../scraper/test')
 
 const router = Router()
 
@@ -9,8 +8,13 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:name', (req, res) => {
-   const data = charactersData.filter( item =>  item.name.toLowerCase().includes(req.params.name.toLowerCase()))      
-   res.json (data)
+   const data = charactersData.filter( item =>  item.name.toLowerCase().includes(req.params.name.toLowerCase()))  
+   
+   if (data == '') {
+      res.json("Character doesn't exist")
+   } else {
+      res.json(data)
+   }
 })
 
 module.exports = router
