@@ -64,28 +64,28 @@ async function getDetails(character) {
             details[label] = removeBrackets(value, '(')
          } 
          else if (label == 'aliases') { 
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else if (label == 'relationshipStatus') {
             details[label] = value
          } 
          else if (label == 'family') {
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else if (label == 'otherRelations') {
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else if (label == 'affiliation') {
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else if (label == 'occupation') {
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else if (label == 'gender') {
             details[label] = value
          } 
          else if (label == 'portrayedBy') {
-            splitData(details, label, structure)
+            details[label] = splitData(structure)
          } 
          else {
             //console.log(label + " null")
@@ -106,13 +106,16 @@ function removeBrackets(str, bracketType) {
    return str
 }
 
-function splitData(details, label, structure) {
-   if (structure.includes('<br>')) {
-      const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-      details[label] = reformatted
-   } else if (structure.includes('<p>')) {
-      const reformatted = structure.split('<p>').map(str => removeHref(str).trim())
-      details[label] = reformatted
+function splitData(string) {
+   if (string.includes('<br>')) {
+      const arrayStr = string.split('<br>').map(str => removeHref(str).trim())
+      return arrayStr
+   } else if (string.includes('<p>')) {
+      const arrayStr = string.split('<p>').map(str => removeHref(str).trim())
+      return arrayStr
+   } else {
+      string = removeHref(string).trim()
+      return string
    }
 }
 
