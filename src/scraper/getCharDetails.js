@@ -5,7 +5,7 @@ const fs = require("fs")
 const characterData = require("../../data/character")
 
 // scrape each character page
-async function scraper(character) {
+async function scrapePage(character) {
    const url = 'https://strangerthings.fandom.com/wiki/' + character
 
    const response = await request.get(url)
@@ -35,8 +35,8 @@ async function getPicture(html) {
    return html.querySelectorAll('.pi-image-thumbnail')[0].getAttribute('src')
 }
 
-async function scrapeData(character) {
-   const parseData = await scraper(character)
+async function getDetails(character) {
+   const parseData = await scrapePage(character)
 
    const summaryLabels = await getSummaryLabels(parseData)
    const summaryValues = await getSummaryValues(parseData)
@@ -151,4 +151,4 @@ function removeHref(str) {
    return str
 }
    
-module.exports = scrapeData
+module.exports = getDetails
