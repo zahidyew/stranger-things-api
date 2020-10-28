@@ -35,6 +35,7 @@ async function getPicture(html) {
    return html.querySelectorAll('.pi-image-thumbnail')[0].getAttribute('src')
 }
 
+// make character obj and assign the right values to the correct label
 async function getDetails(character) {
    const parseData = await scrapePage(character)
    const summaryLabels = await getSummaryLabels(parseData)
@@ -98,6 +99,7 @@ async function getDetails(character) {
    //writeDataToFile(details)
 }
 
+// remove '[]' or '()' from the data
 function removeBrackets(str, bracketType) {
    if (str.includes(bracketType)) {
       const n = str.indexOf(bracketType)
@@ -106,6 +108,7 @@ function removeBrackets(str, bracketType) {
    return str
 }
 
+// split the data based on <p> & <br>
 function splitData(string) {
    if (string.includes('<p>') && string.includes('<br>')) {
       const arrayStr = string.split(/(?:<p>|<br>)/g)
@@ -128,24 +131,32 @@ function splitData(string) {
    }
 }
 
+// remove html tags
 function removeTags(str) {
    // If separator is a regex that contains capturing parentheses (), matched results are included in the array.
    // so ?: to indicate exclusion
-   const regex = /(?:"|”|<p>|<\/p>|<\/a>|<small>|<\/small>)/g
+   const regex = /(?:"|”|<p>|<\/p>|<\/a>|<small>|<\/small>|<i>|<\/i>)/g
    str = str.replace(regex, "")
 
    return str
 }
 
+// remove 'a href' links & rare '<sup' elements
 function removeHref(str) {
    str = removeTags(str)
-   
-   let start = str.indexOf('<a')
-   let end = str.indexOf('>')
-   let s = str.substring(start, end+1)
+   // find all occurence(s) of '<a' in the string
+   const found = str.match(/<a/g)
 
-   str = str.replace(s, "")
+   // if exists, remove all the '<a' elements from the string
+   if (found !== null) {
+      for (let i = 0; i < found.length; i++) {
+         let start = str.indexOf('<a')
+         let end = str.indexOf('>')
+         let s = str.substring(start, end + 1)
 
+         str = str.replace(s, "")
+      }
+   } 
    if (str.includes('<sup')) {
       let start = str.indexOf('<sup')
       let end = str.indexOf('</sup>')
