@@ -107,11 +107,20 @@ function removeBrackets(str, bracketType) {
 }
 
 function splitData(string) {
-   if (string.includes('<br>')) {
-      const arrayStr = string.split('<br>').map(str => removeHref(str).trim())
+   if (string.includes('<p>') && string.includes('<br>')) {
+      const arrayStr = string.split(/(?:<p>|<br>)/g)
+                           .map(str => removeHref(str).trim())
+                           .filter(item => { return item != "" }) // remove empty array 
+      return arrayStr
+   } else if (string.includes('<br>')) {
+      const arrayStr = string.split('<br>')
+                           .map(str => removeHref(str).trim())
+                           .filter(item => { return item != "" })
       return arrayStr
    } else if (string.includes('<p>')) {
-      const arrayStr = string.split('<p>').map(str => removeHref(str).trim())
+      const arrayStr = string.split('<p>')
+                           .map(str => removeHref(str).trim())
+                           .filter(item => { return item != "" })
       return arrayStr
    } else {
       string = removeHref(string).trim()
@@ -120,12 +129,10 @@ function splitData(string) {
 }
 
 function removeTags(str) {
-   str = str.replace(/[""|”]/g, "")
-   str = str.replace('<p>', "")
-   str = str.replace('</p>', "")
-   str = str.replace('</a>', "")
-   str = str.replace('<small>', "")
-   str = str.replace('</small>', "")
+   // If separator is a regex that contains capturing parentheses (), matched results are included in the array.
+   // so ?: to indicate exclusion
+   const regex = /(?:"|”|<p>|<\/p>|<\/a>|<small>|<\/small>)/g
+   str = str.replace(regex, "")
 
    return str
 }
@@ -133,11 +140,19 @@ function removeTags(str) {
 function removeHref(str) {
    str = removeTags(str)
    
-   const start = str.indexOf('<a')
-   const end = str.indexOf('>')
-   const s = str.substring(start, end+1)
+   let start = str.indexOf('<a')
+   let end = str.indexOf('>')
+   let s = str.substring(start, end+1)
 
    str = str.replace(s, "")
+
+   if (str.includes('<sup')) {
+      let start = str.indexOf('<sup')
+      let end = str.indexOf('</sup>')
+      let s = str.substring(start, end + 6)
+
+      str = str.replace(s, "")
+   }
 
    return str
 }
