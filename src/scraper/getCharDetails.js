@@ -37,10 +37,8 @@ async function getPicture(html) {
 
 async function getDetails(character) {
    const parseData = await scrapePage(character)
-
    const summaryLabels = await getSummaryLabels(parseData)
    const summaryValues = await getSummaryValues(parseData)
-
    const name = await getName(parseData)
    const picture = await getPicture(parseData)
 
@@ -51,61 +49,43 @@ async function getDetails(character) {
    if (summaryLabels.length === summaryValues.length) {      
       for (let i = 0; i < summaryLabels.length; i++) {
          const label = camelCase(summaryLabels[i])
-         let value = summaryValues[i].rawText
          const structure = summaryValues[i].innerHTML
+         let value = summaryValues[i].rawText
 
          if (label == 'status') {
-            details[label] = value
+            details[label] = removeBrackets(value, '[')
          } 
          else if (label == 'born') {
-            if (value.includes('[')) {
-               const n = value.indexOf('[')
-               value = value.substring(0, n)
-            }
-            details[label] = value
+            details[label] = removeBrackets(value, '[')
          } 
          else if (label == 'age') {
-            details[label] = value.substring(0,2)
+            // need to remove 2 types of brackets
+            value = removeBrackets(value, '[')
+            details[label] = removeBrackets(value, '(')
          } 
-         else if (label == 'aliases') {            
-            const reformatted = structure.split('<br>').map(str => removeTags(str).trim())
-            details[label] = reformatted
+         else if (label == 'aliases') { 
+            splitData(details, label, structure)
          } 
          else if (label == 'relationshipStatus') {
             details[label] = value
          } 
          else if (label == 'family') {
-            const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-            details[label] = reformatted
+            splitData(details, label, structure)
          } 
          else if (label == 'otherRelations') {
-            const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-            details[label] = reformatted
+            splitData(details, label, structure)
          } 
          else if (label == 'affiliation') {
-            const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-            details[label] = reformatted
+            splitData(details, label, structure)
          } 
          else if (label == 'occupation') {
-            if (structure.includes('<br>')) {
-               const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-               details[label] = reformatted
-            }
-            else {
-               details[label] = value
-            }
+            splitData(details, label, structure)
          } 
          else if (label == 'gender') {
             details[label] = value
          } 
          else if (label == 'portrayedBy') {
-            if (structure.includes('<br>')) {
-               const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
-               details[label] = reformatted
-            }
-            else {
-               details[label] = value
-            }
+            splitData(details, label, structure)
          } 
          else {
             //console.log(label + " null")
@@ -113,19 +93,27 @@ async function getDetails(character) {
       }  
    }
 
-   if(!details.hasOwnProperty('relationshipStatus')) {
-      details['relationshipStatus'] = 'undefined'
-   } //aliases, family, affiliation
-   
+   details = checkProperty(details)
    console.log(details)
+   //writeDataToFile(details)
+}
 
-   /* characterData.push(details)
+function removeBrackets(str, bracketType) {
+   if (str.includes(bracketType)) {
+      const n = str.indexOf(bracketType)
+      str = str.substring(0, n).trim()
+   }  
+   return str
+}
 
-   fs.writeFile("./data/character.json", JSON.stringify(characterData), err => {
-      if (err) throw err
-
-      console.log("Done")
-   })  */
+function splitData(details, label, structure) {
+   if (structure.includes('<br>')) {
+      const reformatted = structure.split('<br>').map(str => removeHref(str).trim())
+      details[label] = reformatted
+   } else if (structure.includes('<p>')) {
+      const reformatted = structure.split('<p>').map(str => removeHref(str).trim())
+      details[label] = reformatted
+   }
 }
 
 function removeTags(str) {
@@ -149,6 +137,38 @@ function removeHref(str) {
    str = str.replace(s, "")
 
    return str
+}
+
+// some characters has unmentioned details, so we need to check and assign accordingly 
+function checkProperty(object) {
+   if (!object.hasOwnProperty('age')) {
+      object['age'] = 'not mentioned'
+   }
+   if (!object.hasOwnProperty('relationshipStatus')) {
+      object['relationshipStatus'] = 'not mentioned'
+   } //aliases, family, affiliation
+   if (!object.hasOwnProperty('aliases')) {
+      object['aliases'] = 'not mentioned'
+   }
+   if (!object.hasOwnProperty('family')) {
+      object['family'] = 'not mentioned'
+   }
+   if (!object.hasOwnProperty('affiliation')) {
+      object['affiliation'] = 'not mentioned'
+   }
+
+   return object
+}
+
+// write characters data to a json file
+function writeDataToFile(details) {
+   characterData.push(details)
+
+   fs.writeFile("./data/character.json", JSON.stringify(characterData), err => {
+      if (err) throw err
+
+      console.log("Done")
+   })
 }
    
 module.exports = getDetails
