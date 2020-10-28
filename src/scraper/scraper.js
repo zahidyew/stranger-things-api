@@ -4,12 +4,8 @@ const { camelCase } = require('lodash')
 const fs = require("fs")
 const characterData = require("../../data/character")
 
-//let details = new Object()
-
+// scrape each character page
 async function scraper(character) {
-   //const character = "Mike_Wheeler"
-   //const character = "Dustin_Henderson"
-   //const character = "Will_Byers"
    const url = 'https://strangerthings.fandom.com/wiki/' + character
 
    const response = await request.get(url)
@@ -19,18 +15,22 @@ async function scraper(character) {
    return parseData
 }
 
+// get character name from its page
 async function getName(html) {
    return html.querySelectorAll('.pi-item.pi-item-spacing.pi-title').map(node => node.rawText);
 }
    
+// get all the labels for bio info, physical info & portrayal
 async function getSummaryLabels(html) {   
    return html.querySelectorAll('h3.pi-data-label').map(node => node.structuredText)   
 }
 
+// get all the values for bio info, physical info & portrayal
 async function getSummaryValues(html) {
    return html.querySelectorAll('div.pi-data-value')
 }
 
+// get the link for character's picture 
 async function getPicture(html) {
    return html.querySelectorAll('.pi-image-thumbnail')[0].getAttribute('src')
 }
@@ -116,9 +116,7 @@ async function scrapeData(character) {
    if(!details.hasOwnProperty('relationshipStatus')) {
       details['relationshipStatus'] = 'undefined'
    } //aliases, family, affiliation
-   console.log(details)
-
-   //return details
+   //console.log(details)
 
    characterData.push(details)
 
@@ -126,8 +124,7 @@ async function scrapeData(character) {
       if (err) throw err
 
       console.log("Done")
-   })
-   
+   }) 
 }
 
 function removeTags(str) {
@@ -153,9 +150,6 @@ function removeHref(str) {
    return str
 }
    
-//scrapeData();
-
-
 async function getCharactersName() {
    const url = 'https://strangerthings.fandom.com/wiki/Stranger_Things_Wiki'
 
@@ -164,31 +158,30 @@ async function getCharactersName() {
    const parseData = await parse(data)
    const names = await scrapeName(parseData)
 
-   //let aaa = 
-   await names.map(name => scrapeData(name))//console.log("is: " + name))
+   //console.log(names)
 
-
-   //console.log(aaa)
-
-   /* fs.writeFile("./src/scraper/test.json", JSON.stringify(details), err => {
-      if (err) throw err
-
-      console.log("Done")
-   })  */
+   await names.map(name => scrapeData(name))
 }
 
 async function scrapeName(html) {
-   return html.querySelectorAll('div.portal div.wikia-gallery-row div.wikia-gallery-item div.thumb div.gallery-image-wrapper').map(node => getTitle(node));
+   //return html.querySelectorAll('div.portal div.wikia-gallery-row div.wikia-gallery-item div.thumb div.gallery-image-wrapper').map(node => getTitle(node));
+   
+   return html.querySelectorAll('div.portal div.wikia-gallery-row div.wikia-gallery-item div.thumb div.gallery-image-wrapper .image.link-internal').map(node => getTitle(node));
+
+   //return html.querySelectorAll('div.lightbox-caption').map(node => node.rawText.toLowerCase()) //owens wont reroute to its page :(
 }
 
 function getTitle(node) {
-   let str = node.innerHTML
+   let str = node.getAttribute('title')
 
-   const n = str.indexOf('title')
+   str = str.substring(0, str.indexOf('(')).trim()
+   //console.log(str)
+
+   /* const n = str.indexOf('title')
    str = str.substring(n + 7) //, n + str.indexOf('"'))
 
    const l = str.indexOf('(')
-   str = str.substring(0, l-1).trim()
+   str = str.substring(0, l-1).trim() */
 
    //console.log(str + "\n")
    //console.log(n)
