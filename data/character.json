@@ -1,39 +1,5 @@
 [
    {
-      "name": "Joyce Byers",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/d/df/Joyce_%28S3%29.png/revision/latest/scale-to-width-down/310?cb=20190705190931",
-      "status": "Alive",
-      "born": "1940s",
-      "age": "La",
-      "relationshipStatus": "Divorced from Lonnie Byers",
-      "family": [
-         "Will Byers (son)",
-         "Jonathan Byers (son)",
-         "Darlene (aunt)",
-         "Eleven (friend/daughter figure; ward)"
-      ],
-      "otherRelations": [
-         "Jim Hopper ✝ (best friend, love interest)",
-         "Bob Newby ✝  (former boyfriend)",
-         "Alexei ✝  (friend)",
-         "Murray Bauman (friend)",
-         "Karen Wheeler (friend)",
-         "Scott Clarke (friend)",
-         "Martin Brenner (enemy)",
-         "Grigori ✝ (enemy)"
-      ],
-      "affiliation": [
-         "Melvald's General Store (formerly)",
-         "The Byers family"
-      ],
-      "occupation": [
-         "Retail clerk (formerly)",
-         ""
-      ],
-      "gender": "Female",
-      "portrayedBy": "Winona Ryder"
-   },
-   {
       "name": "Nancy Wheeler",
       "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/2/22/Nancy_S3.png/revision/latest/scale-to-width-down/273?cb=20190704211903",
       "status": "Alive",
@@ -65,10 +31,87 @@
       ],
       "occupation": [
          "Student at Hawkins High School",
-         "Intern at <i><a href=/wiki/The_Hawkins_Post title=The Hawkins Post>The Hawkins Post</i> (formerly)"
+         "Intern at The Hawkins Post (formerly)"
       ],
       "gender": "Female",
-      "portrayedBy": "Natalia Dyer"
+      "portrayedBy": [
+         "Natalia Dyer"
+      ]
+   },
+   {
+      "name": "Jonathan Byers",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8e/Jonathan_S3.png/revision/latest/scale-to-width-down/310?cb=20200915033452",
+      "status": "Alive",
+      "born": "1967",
+      "age": "16",
+      "relationshipStatus": "Dating Nancy Wheeler",
+      "family": [
+         "Will Byers (brother)",
+         "Joyce Byers (mother)",
+         "Lonnie Byers (father)",
+         "Darlene (great-aunt)",
+         "Eleven (friend/housemate)"
+      ],
+      "otherRelations": [
+         "Nancy Wheeler (girlfriend)",
+         "Steve Harrington (friend)",
+         "Tommy H. (enemy)",
+         "Carol (enemy)",
+         "Tom Holloway ✝ (former co-worker)",
+         "Bruce Lowe ✝ (former co-worker)"
+      ],
+      "affiliation": [
+         "The Byers family"
+      ],
+      "occupation": [
+         "Student at Hawkins High School (formerly)",
+         "Intern at The Hawkins Post (formerly)"
+      ],
+      "gender": "Male",
+      "portrayedBy": [
+         "Charlie Heaton"
+      ],
+      "aliases": [
+         "not mentioned"
+      ]
+   },
+   {
+      "name": "Lucas Sinclair",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8d/Lucas_Sinclair-S03.png/revision/latest/scale-to-width-down/310?cb=20190901044416",
+      "status": "Alive",
+      "born": "1971",
+      "age": "12",
+      "aliases": [
+         "Stalker",
+         "Ranger",
+         "Lukey"
+      ],
+      "relationshipStatus": "Dating Max Mayfield",
+      "family": [
+         "Mrs. Sinclair (mother)",
+         "Mr. Sinclair (father)",
+         "Erica Sinclair (sister)"
+      ],
+      "otherRelations": [
+         "Dustin Henderson (best friend)",
+         "Mike Wheeler (best friend)",
+         "Will Byers (best friend)",
+         "Eleven (best friend)",
+         "Max (girlfriend)",
+         "Troy (enemy)",
+         "James (enemy)"
+      ],
+      "affiliation": [
+         "AV Club",
+         "The Party"
+      ],
+      "occupation": [
+         "Student at Hawkins Middle School"
+      ],
+      "gender": "Male",
+      "portrayedBy": [
+         "Caleb McLaughlin"
+      ]
    },
    {
       "name": "Mike Wheeler",
@@ -101,43 +144,160 @@
          "The Party",
          "The Wheeler family"
       ],
-      "occupation": "Student at Hawkins Middle School",
+      "occupation": [
+         "Student at Hawkins Middle School"
+      ],
       "gender": "Male",
-      "portrayedBy": "Finn Wolfhard"
+      "portrayedBy": [
+         "Finn Wolfhard"
+      ]
    },
    {
-      "name": "Lucas Sinclair",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8d/Lucas_Sinclair-S03.png/revision/latest/scale-to-width-down/310?cb=20190901044416",
-      "status": "Alive",
-      "born": "1971",
-      "age": "12",
+      "name": "Dr. Alexei",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/a/ad/Alexei.JPG/revision/latest/scale-to-width-down/310?cb=20190705023926",
+      "status": "Deceased",
+      "born": "1940s",
       "aliases": [
-         "Stalker",
-         "Ranger",
-         "Lukey"
-      ],
-      "relationshipStatus": "Dating Max Mayfield",
-      "family": [
-         "Mrs. Sinclair (mother)",
-         "Mr. Sinclair (father)",
-         "Erica Sinclair (sister)"
+         "Smirnoff (by Hopper)",
+         "Traitor (by Grigori)"
       ],
       "otherRelations": [
-         "Dustin Henderson (best friend)",
-         "Mike Wheeler (best friend)",
-         "Will Byers (best friend)",
-         "Eleven (best friend)",
-         "Max (girlfriend)",
-         "Troy (enemy)",
-         "James (enemy)"
+         "Murray Bauman (good friend)",
+         "Joyce Byers (friend)",
+         "Jim Hopper (acquaintance)",
+         "Grigori (former ally; enemy)",
+         "Ozerov (former ally; enemy)",
+         "Stepanov (former employer; enemy)"
       ],
       "affiliation": [
-         "AV Club",
-         "The Party"
+         "Soviet Union (betrayed)"
       ],
-      "occupation": "Student at Hawkins Middle School",
+      "occupation": [
+         "Scientist"
+      ],
       "gender": "Male",
-      "portrayedBy": "Caleb McLaughlin"
+      "portrayedBy": [
+         "Alec Utgoff"
+      ],
+      "age": "not mentioned",
+      "relationshipStatus": "not mentioned",
+      "family": [
+         "not mentioned"
+      ]
+   },
+   {
+      "name": "Will Byers",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/9/96/Will_S3.png/revision/latest/scale-to-width-down/285?cb=20190704211311",
+      "status": "Alive",
+      "born": "March 22, 1971",
+      "age": "12",
+      "aliases": [
+         "Will the Wise",
+         "The Boy Who Came Back to Life",
+         "Zombie Boy",
+         "The Spy",
+         "Cleric"
+      ],
+      "family": [
+         "Jonathan Byers (brother)",
+         "Joyce Byers (mother)",
+         "Lonnie Byers (father)",
+         "Darlene (great-aunt)",
+         "Eleven (friend; housemate)"
+      ],
+      "otherRelations": [
+         "Mike Wheeler (best friend)",
+         "Dustin Henderson (best friend)",
+         "Lucas Sinclair (best friend)",
+         "Max (friend)",
+         "Troy (enemy)",
+         "James (enemy)",
+         "Bob Newby ✝  (friend/father figure)"
+      ],
+      "affiliation": [
+         "AV Club (formerly)",
+         "The Party",
+         "The Byers family"
+      ],
+      "occupation": [
+         "Student at Hawkins Middle School (formerly)"
+      ],
+      "gender": "Male",
+      "portrayedBy": [
+         "Noah Schnapp"
+      ],
+      "relationshipStatus": "not mentioned"
+   },
+   {
+      "name": "Barbara Holland",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/46/Barbara_Holland.png/revision/latest/scale-to-width-down/292?cb=20170314234835",
+      "status": "Deceased",
+      "born": "September 13, 1967",
+      "age": "16",
+      "aliases": [
+         "Barb (by most people)",
+         "Miss Holland (by Sam Owens)"
+      ],
+      "family": [
+         "Marsha Holland (mother)",
+         "Mr. Holland (father)"
+      ],
+      "otherRelations": [
+         "Nancy Wheeler (best friend)"
+      ],
+      "occupation": [
+         "Student at Hawkins High School (formerly)"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Shannon Purser"
+      ],
+      "relationshipStatus": "not mentioned",
+      "affiliation": [
+         "not mentioned"
+      ]
+   },
+   {
+      "name": "Jim Hopper",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/c/c6/ST3_Jim_Hopper_portrait.jpg/revision/latest/scale-to-width-down/310?cb=20190703002805",
+      "status": "Alive",
+      "born": "1942",
+      "age": "41",
+      "aliases": [
+         "Hopper",
+         "Chief Hopper",
+         "Hop",
+         "Chief",
+         "Antique Chariot",
+         "Fat Rambo"
+      ],
+      "relationshipStatus": "Divorced from Diane",
+      "family": [
+         "Sara Hopper † (daughter)",
+         "Eleven (adopted daughter)",
+         "Unnamed grandfather"
+      ],
+      "otherRelations": [
+         "Joyce Byers (friend, love interest)",
+         "Benny Hammond † (friend)",
+         "Bob Newby † (former classmate/friend)",
+         "Powell & Callahan (friends and co-workers)",
+         "Murray Bauman (friend)",
+         "Grigori (enemy)",
+         "Martin Brenner (enemy)"
+      ],
+      "affiliation": [
+         "Hawkins Police Department",
+         "Department of Energy/Hawkins Lab (formerly)"
+      ],
+      "occupation": [
+         "Police Chief",
+         "Homicide Detective (formerly)"
+      ],
+      "gender": "Male",
+      "portrayedBy": [
+         "David Harbour"
+      ]
    },
    {
       "name": "Dustin Henderson",
@@ -175,9 +335,44 @@
          "Scoops Troop",
          "Henderson family"
       ],
-      "occupation": "Student at Hawkins Middle School",
+      "occupation": [
+         "Student at Hawkins Middle School"
+      ],
       "gender": "Male",
-      "portrayedBy": "Gaten Matarazzo"
+      "portrayedBy": [
+         "Gaten Matarazzo"
+      ]
+   },
+   {
+      "name": "Karen Wheeler",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/b/bb/Karen_S3.png/revision/latest?cb=20190708062008",
+      "status": "Alive",
+      "born": "1940's",
+      "age": "Late 30's",
+      "relationshipStatus": "Married to Ted Wheeler",
+      "family": [
+         "Mike Wheeler (son)",
+         "Nancy Wheeler (daughter)",
+         "Holly Wheeler (daughter)",
+         "Ted Wheeler (husband)"
+      ],
+      "otherRelations": [
+         "Joyce Byers (friend)",
+         "Jim Hopper (friend)"
+      ],
+      "affiliation": [
+         "The Wheeler family"
+      ],
+      "occupation": [
+         "Most likely unemployed"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Cara Buono"
+      ],
+      "aliases": [
+         "not mentioned"
+      ]
    },
    {
       "name": "Bob Newby",
@@ -193,37 +388,25 @@
          "Jim Hopper (former classmate)",
          "Will Byers (friend/son figure)"
       ],
-      "occupation": "Manager of RadioShack",
-      "gender": "Male",
-      "portrayedBy": "Sean Astin"
-   },
-   {
-      "name": "Karen Wheeler",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/b/bb/Karen_S3.png/revision/latest?cb=20190708062008",
-      "status": "Alive",
-      "born": "1940's",
-      "age": "La",
-      "relationshipStatus": "Married to Ted Wheeler",
-      "family": [
-         "Mike Wheeler (son)",
-         "Nancy Wheeler (daughter)",
-         "Holly Wheeler (daughter)",
-         "Ted Wheeler (husband)"
+      "occupation": [
+         "Manager of RadioShack"
       ],
-      "otherRelations": [
-         "Joyce Byers (friend)<a href=/wiki/Jim_Hopper title=Jim Hopper>Jim Hopper</a> (friend)"
+      "gender": "Male",
+      "portrayedBy": [
+         "Sean Astin"
+      ],
+      "age": "not mentioned",
+      "family": [
+         "not mentioned"
       ],
       "affiliation": [
-         "The Wheeler family"
-      ],
-      "occupation": "Most likely unemployed",
-      "gender": "Female",
-      "portrayedBy": "Cara Buono"
+         "not mentioned"
+      ]
    },
    {
       "name": "Dr. Martin Brenner",
       "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/0/06/Dr_Martin_Brenner_version_3.png/revision/latest/scale-to-width-down/305?cb=20170416110233",
-      "status": "Alive [1]",
+      "status": "Alive",
       "born": "1931",
       "age": "52",
       "aliases": [
@@ -233,8 +416,7 @@
       "otherRelations": [
          "Terry Ives (former test subject)",
          "Eleven (former test subject)",
-         "Kali Prasad (former test subject)",
-         ""
+         "Kali Prasad (former test subject)"
       ],
       "affiliation": [
          "US Department of Energy",
@@ -243,66 +425,104 @@
          "HNL"
       ],
       "occupation": [
-         "Student at Hawkins High School (1945-1949)Research scientist",
+         "Student at Hawkins High School (1945-1949)",
+         "Research scientist",
          "Director of Hawkins National Laboratory (formerly)"
       ],
       "gender": "Male",
-      "portrayedBy": "Matthew Modine",
-      "relationshipStatus": "undefined"
+      "portrayedBy": [
+         "Matthew Modine"
+      ],
+      "relationshipStatus": "not mentioned",
+      "family": [
+         "not mentioned"
+      ]
    },
    {
-      "name": "Jonathan Byers",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8e/Jonathan_S3.png/revision/latest/scale-to-width-down/310?cb=20200915033452",
+      "name": "Eleven",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/f1/Eleven_S03_portrait.png/revision/latest/scale-to-width-down/286?cb=20190722075442",
       "status": "Alive",
-      "born": "1967",
-      "age": "16",
-      "relationshipStatus": "Dating Nancy Wheeler",
+      "born": "1971",
+      "age": "12",
+      "aliases": [
+         "El",
+         "011",
+         "Jane Ives",
+         "The Weirdo",
+         "Eleanor",
+         "Shirley Temple",
+         "Mage"
+      ],
+      "relationshipStatus": "Dating Mike Wheeler",
       "family": [
-         "Will Byers (brother)",
-         "Joyce Byers (mother)",
-         "Lonnie Byers (father)",
-         "Darlene (great-aunt)",
-         "Eleven (friend/housemate)"
+         "Joyce Byers (friend/mother figure; guardian)",
+         "Jim Hopper † (adoptive father)",
+         "Sara Hopper † (adoptive sister)",
+         "Terry Ives (biological mother)",
+         "Becky Ives (aunt)",
+         "Kali Prasad (spiritual sister/fellow Hawkins Lab test subject)"
       ],
       "otherRelations": [
-         "Nancy Wheeler (girlfriend)",
-         "Steve Harrington (friend)",
-         "Tommy H. (enemy)",
-         "Carol (enemy)",
-         "Tom Holloway ✝ (former co-worker)",
-         "Bruce Lowe ✝ (former co-worker)"
+         "Mike Wheeler (boyfriend)",
+         "Dustin Henderson (best friend)",
+         "Lucas Sinclair (best friend)",
+         "Max Mayfield (best friend)",
+         "Will Byers (friend; housemate)",
+         "Jonathan Byers (friend; housemate)",
+         "Benny Hammond † (benefactor)",
+         "Martin Brenner (former father figure/captor)"
       ],
       "affiliation": [
+         "Hawkins National Laboratory (formerly)",
+         "The Party",
+         "Ives family",
+         "Hopper family"
+      ],
+      "occupation": [
+         "Lab test subject (formerly)"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Millie Bobby Brown"
+      ]
+   },
+   {
+      "name": "Joyce Byers",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/d/df/Joyce_%28S3%29.png/revision/latest/scale-to-width-down/310?cb=20190705190931",
+      "status": "Alive",
+      "born": "1940s",
+      "age": "Late 30s",
+      "relationshipStatus": "Divorced from Lonnie Byers",
+      "family": [
+         "Will Byers (son)",
+         "Jonathan Byers (son)",
+         "Darlene (aunt)",
+         "Eleven (friend/daughter figure; ward)"
+      ],
+      "otherRelations": [
+         "Jim Hopper ✝ (best friend, love interest)",
+         "Bob Newby ✝  (former boyfriend)",
+         "Alexei ✝  (friend)",
+         "Murray Bauman (friend)",
+         "Karen Wheeler (friend)",
+         "Scott Clarke (friend)",
+         "Martin Brenner (enemy)",
+         "Grigori ✝ (enemy)"
+      ],
+      "affiliation": [
+         "Melvald's General Store (formerly)",
          "The Byers family"
       ],
       "occupation": [
-         "Student at Hawkins High School (formerly)",
-         "Intern at The Hawkins Post (formerly)"
+         "Retail clerk (formerly)"
       ],
-      "gender": "Male",
-      "portrayedBy": "Charlie Heaton"
-   },
-   {
-      "name": "Barbara Holland",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/46/Barbara_Holland.png/revision/latest/scale-to-width-down/292?cb=20170314234835",
-      "status": "Deceased",
-      "born": "September 13, 1967",
-      "age": "16",
-      "aliases": [
-         "Barb (by most people)",
-         "Miss Holland (by <a href=/wiki/Sam_Owens title=Sam Owens>Sam Owens)"
-      ],
-      "family": [
-         "Marsha Holland (mother)",
-         "Mr. Holland (father)"
-      ],
-      "otherRelations": [
-         "Nancy Wheeler (best friend)"
-      ],
-      "occupation": "Student at Hawkins High School (formerly)",
       "gender": "Female",
-      "portrayedBy": "Shannon Purser",
-      "relationshipStatus": "undefined"
+      "portrayedBy": [
+         "Winona Ryder"
+      ],
+      "aliases": [
+         "not mentioned"
+      ]
    },
    {
       "name": "Steve Harrington",
@@ -324,8 +544,7 @@
          "Nancy Wheeler (ex-girlfriend)",
          "Billy Hargrove ✝ (enemy)",
          "Tommy H. (former friend)",
-         "Carol (former friend)",
-         ""
+         "Carol (former friend)"
       ],
       "affiliation": [
          "Scoops Troop"
@@ -336,252 +555,10 @@
          "Student at Hawkins High School (formerly)"
       ],
       "gender": "Male",
-      "portrayedBy": "Joe Keery",
-      "relationshipStatus": "undefined"
-   },
-   {
-      "name": "Jim Hopper",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/c/c6/ST3_Jim_Hopper_portrait.jpg/revision/latest/scale-to-width-down/310?cb=20190703002805",
-      "status": "Alive",
-      "born": "1942",
-      "age": "41",
-      "aliases": [
-         "Hopper",
-         "Chief Hopper",
-         "Hop",
-         "Chief",
-         "Antique Chariot",
-         "Fat Rambo"
-      ],
-      "relationshipStatus": "Divorced from Diane",
-      "family": [
-         "Sara Hopper † (daughter)",
-         "Eleven (adopted daughter)",
-         "Unnamed grandfather"
-      ],
-      "otherRelations": [
-         "Joyce Byers (friend, love interest)",
-         "Benny Hammond † (friend)",
-         "Bob Newby † (former classmate/friend)",
-         "Powell & <a href=/wiki/Callahan title=Callahan class=mw-redirect>Callahan</a> (friends and co-workers)",
-         "Murray Bauman (friend)",
-         "Grigori (enemy)",
-         "Martin Brenner (enemy)",
-         ""
-      ],
-      "affiliation": [
-         "Hawkins Police Department",
-         "Department of Energy/<a href=/wiki/Hawkins_National_Laboratory title=Hawkins National Laboratory>Hawkins Lab</a> (formerly)"
-      ],
-      "occupation": [
-         "Police Chief",
-         "Homicide Detective (formerly)"
-      ],
-      "gender": "Male",
-      "portrayedBy": "David Harbour"
-   },
-   {
-      "name": "Eleven",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/f1/Eleven_S03_portrait.png/revision/latest/scale-to-width-down/286?cb=20190722075442",
-      "status": "Alive",
-      "born": "1971",
-      "age": "12",
-      "aliases": [
-         "El",
-         "011",
-         "Jane Ives",
-         "The Weirdo",
-         "Eleanor",
-         "Shirley Temple",
-         "Mage",
-         ""
-      ],
-      "relationshipStatus": "Dating Mike Wheeler",
-      "family": [
-         "Joyce Byers (friend/mother figure; guardian)",
-         "Jim Hopper † (adoptive father)",
-         "Sara Hopper † (adoptive sister)",
-         "Terry Ives (biological mother)",
-         "Becky Ives (aunt)",
-         "Kali Prasad (spiritual sister/fellow Hawkins Lab test subject)"
-      ],
-      "otherRelations": [
-         "Mike Wheeler (boyfriend)",
-         "Dustin Henderson (best friend)",
-         "Lucas Sinclair (best friend)",
-         "Max Mayfield (best friend)",
-         "Will Byers (friend; housemate)",
-         "Jonathan Byers (friend; housemate)",
-         "Benny Hammond † (benefactor)",
-         "Martin Brenner (former father figure/captor)",
-         ""
-      ],
-      "affiliation": [
-         "Hawkins National Laboratory (formerly)",
-         "The Party",
-         "Ives family",
-         "Hopper family"
-      ],
-      "occupation": "Lab test subject (formerly)",
-      "gender": "Female",
-      "portrayedBy": "Millie Bobby Brown"
-   },
-   {
-      "name": "Dr. Alexei",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/a/ad/Alexei.JPG/revision/latest/scale-to-width-down/310?cb=20190705023926",
-      "status": "Deceased",
-      "born": "1940s",
-      "aliases": [
-         "Smirnoff (by <a href=/wiki/Hopper title=Hopper class=mw-redirect>Hopper)Traitor <small>(by <a href=/wiki/Grigori title=Grigori>Grigori</a>)</small>"
-      ],
-      "otherRelations": [
-         "Murray Bauman (good friend)",
-         "Joyce Byers (friend)",
-         "Jim Hopper (acquaintance)",
-         "Grigori (former ally; enemy)",
-         "Ozerov (former ally; enemy)",
-         "Stepanov (former employer; enemy)"
-      ],
-      "affiliation": [
-         "Soviet Union (betrayed)"
-      ],
-      "occupation": "Scientist",
-      "gender": "Male",
-      "portrayedBy": "Alec Utgoff",
-      "relationshipStatus": "undefined"
-   },
-   {
-      "name": "Will Byers",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/9/96/Will_S3.png/revision/latest/scale-to-width-down/285?cb=20190704211311",
-      "status": "Alive",
-      "born": "March 22, 1971",
-      "age": "12",
-      "aliases": [
-         "Will the Wise",
-         "The Boy Who Came Back to Life",
-         "Zombie Boy",
-         "The Spy",
-         "Cleric"
-      ],
-      "family": [
-         "Jonathan Byers (brother)",
-         "Joyce Byers (mother)",
-         "Lonnie Byers (father)",
-         "Darlene (great-aunt)",
-         "Eleven (friend; housemate)",
-         ""
-      ],
-      "otherRelations": [
-         "Mike Wheeler (best friend)",
-         "Dustin Henderson (best friend)",
-         "Lucas Sinclair (best friend)",
-         "Max (friend)",
-         "Troy (enemy)",
-         "James (enemy)",
-         "Bob Newby ✝  (friend/father figure)"
-      ],
-      "affiliation": [
-         "AV Club (formerly)",
-         "The Party",
-         "The Byers family"
-      ],
-      "occupation": "Student at Hawkins Middle School (formerly)",
-      "gender": "Male",
-      "portrayedBy": "Noah Schnapp",
-      "relationshipStatus": "undefined"
-   },
-   {
-      "name": "Erica Sinclair",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8d/Erica_Sinclair_S3.png/revision/latest/scale-to-width-down/310?cb=20190706021540",
-      "status": "Alive",
-      "born": "1975",
-      "age": "9 ",
-      "aliases": [
-         "Nerd (By <a href=/wiki/Dustin title=Dustin class=mw-redirect>Dustin)"
-      ],
-      "family": [
-         "Mrs. Sinclair (mother)",
-         "Mr. Sinclair (father)",
-         "Lucas Sinclair (brother)",
-         "Jack (Uncle)"
-      ],
-      "otherRelations": [
-         "Dustin Henderson (friend)",
-         "Robin Buckley (Friend)",
-         "Steve Harrington (Friend)",
-         "Tina (Friend)",
-         ""
-      ],
-      "affiliation": [
-         "Scoops Troop"
-      ],
-      "occupation": "Elementary School Student",
-      "gender": "Female",
-      "portrayedBy": "Priah Ferguson",
-      "relationshipStatus": "undefined"
-   },
-   {
-      "name": "Max Mayfield",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/41/6496D145-7DEC-4C23-BB62-0059C0A1A72E.jpeg/revision/latest/scale-to-width-down/310?cb=20190709215216",
-      "status": "Alive",
-      "born": "1971",
-      "age": "13",
-      "aliases": [
-         "MADMAX",
-         "Zoomer",
-         "Maxine"
-      ],
-      "relationshipStatus": "Dating Lucas Sinclair",
-      "family": [
-         "Billy Hargrove (stepbrother) ✝",
-         "Neil Hargrove (stepfather)",
-         "Susan Hargrove (mother)",
-         "Sam Mayfield <sup id=cite_ref-0 class=reference><a href=#cite_note-0>[1]</a></sup>(father)"
-      ],
-      "otherRelations": [
-         "Nate Walker <sup id=cite_ref-1 class=reference><a href=#cite_note-1>[2]</sup>(best friend)<a href=/wiki/Lucas_Sinclair title=Lucas Sinclair>Lucas Sinclair</a> <small>(boyfriend/best friend)</small>",
-         "Dustin Henderson (best friend)",
-         "Will Byers (best friend)",
-         "Mike Wheeler (friend)",
-         "Eleven (best friend)"
-      ],
-      "affiliation": [
-         "The Party"
-      ],
-      "occupation": "Student in Hawkins Middle School (Graduated) Student at Hawkins High School (Possible in Season 4-Present)",
-      "gender": "Female",
       "portrayedBy": [
-         "Sadie Sink",
-         "Jacey Sink (child)"
-      ]
-   },
-   {
-      "name": "Robin Buckley",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/fc/Robin_S3.png/revision/latest/scale-to-width-down/310?cb=20190409051202",
-      "status": "Alive",
-      "born": "1968",
-      "age": "17",
-      "aliases": [
-         "Tweedledee"
+         "Joe Keery"
       ],
-      "relationshipStatus": "Single",
-      "otherRelations": [
-         "Steve Harrington (best friend/co-worker/former classmate)",
-         "Dustin Henderson (friend)",
-         "Erica Sinclair (customer/friend)",
-         "Tammy Thompson (former love interest)",
-         ""
-      ],
-      "affiliation": [
-         "Scoops Troop"
-      ],
-      "occupation": [
-         "Student at Hawkins High School (formerly; graduated)",
-         "Family Video employee",
-         "Scoops Ahoy employee (formerly)"
-      ],
-      "gender": "Female",
-      "portrayedBy": "Maya Hawke"
+      "relationshipStatus": "not mentioned"
    },
    {
       "name": "Kali Prasad",
@@ -612,7 +589,112 @@
          "Linnea Berthelsen",
          "Vanathi Parthiban (child)"
       ],
-      "relationshipStatus": "undefined"
+      "relationshipStatus": "not mentioned",
+      "affiliation": [
+         "not mentioned"
+      ]
+   },
+   {
+      "name": "Erica Sinclair",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/8/8d/Erica_Sinclair_S3.png/revision/latest/scale-to-width-down/310?cb=20190706021540",
+      "status": "Alive",
+      "born": "1975",
+      "age": "9",
+      "aliases": [
+         "Nerd (By Dustin)"
+      ],
+      "family": [
+         "Mrs. Sinclair (mother)",
+         "Mr. Sinclair (father)",
+         "Lucas Sinclair (brother)",
+         "Jack (Uncle)"
+      ],
+      "otherRelations": [
+         "Dustin Henderson (friend)",
+         "Robin Buckley (Friend)",
+         "Steve Harrington (Friend)",
+         "Tina (Friend)"
+      ],
+      "affiliation": [
+         "Scoops Troop"
+      ],
+      "occupation": [
+         "Elementary School Student"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Priah Ferguson"
+      ],
+      "relationshipStatus": "not mentioned"
+   },
+   {
+      "name": "Max Mayfield",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/41/6496D145-7DEC-4C23-BB62-0059C0A1A72E.jpeg/revision/latest/scale-to-width-down/310?cb=20190709215216",
+      "status": "Alive",
+      "born": "1971",
+      "age": "13",
+      "aliases": [
+         "MADMAX",
+         "Zoomer",
+         "Maxine"
+      ],
+      "relationshipStatus": "Dating Lucas Sinclair",
+      "family": [
+         "Billy Hargrove (stepbrother) ✝",
+         "Neil Hargrove (stepfather)",
+         "Susan Hargrove (mother)",
+         "Sam Mayfield (father)"
+      ],
+      "otherRelations": [
+         "Nate Walker (best friend)",
+         "Lucas Sinclair (boyfriend/best friend)",
+         "Dustin Henderson (best friend)",
+         "Will Byers (best friend)",
+         "Mike Wheeler (friend)",
+         "Eleven (best friend)"
+      ],
+      "affiliation": [
+         "The Party"
+      ],
+      "occupation": [
+         "Student in Hawkins Middle School (Graduated)",
+         "Student at Hawkins High School (Possible in Season 4-Present)"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Sadie Sink",
+         "Jacey Sink (child)"
+      ]
+   },
+   {
+      "name": "Dr. Sam Owens",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/fe/Sam_Owens-1985.png/revision/latest/scale-to-width-down/310?cb=20190811021133",
+      "status": "Alive",
+      "born": "somewhere in the 1920s",
+      "age": "60s",
+      "otherRelations": [
+         "Jim Hopper (friend)",
+         "Joyce Byers (friend)",
+         "Will Byers (patient)"
+      ],
+      "affiliation": [
+         "Department of Energy",
+         "Hawkins National Laboratory"
+      ],
+      "occupation": [
+         "Acting Director of Operations at Hawkins Lab (formerly)"
+      ],
+      "gender": "Male",
+      "portrayedBy": [
+         "Paul Reiser"
+      ],
+      "relationshipStatus": "not mentioned",
+      "aliases": [
+         "not mentioned"
+      ],
+      "family": [
+         "not mentioned"
+      ]
    },
    {
       "name": "Murray Bauman",
@@ -621,7 +703,8 @@
       "born": "1944",
       "age": "40",
       "aliases": [
-         "Bald EagleMr. Bunman (by Erica)"
+         "Bald Eagle",
+         "Mr. Bunman (by Erica)"
       ],
       "relationshipStatus": "Single",
       "family": [
@@ -641,27 +724,9 @@
          "Investigative Journalist  (formerly)"
       ],
       "gender": "Male",
-      "portrayedBy": "Brett Gelman"
-   },
-   {
-      "name": "Dr. Sam Owens",
-      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/fe/Sam_Owens-1985.png/revision/latest/scale-to-width-down/310?cb=20190811021133",
-      "status": "Alive",
-      "born": "somewhere in the 1920s",
-      "age": "60",
-      "otherRelations": [
-         "Jim Hopper (friend)",
-         "Joyce Byers (friend)",
-         "Will Byers (patient)"
-      ],
-      "affiliation": [
-         "Department of Energy",
-         "Hawkins National Laboratory"
-      ],
-      "occupation": "Acting Director of Operations at Hawkins Lab (formerly)",
-      "gender": "Male",
-      "portrayedBy": "Paul Reiser",
-      "relationshipStatus": "undefined"
+      "portrayedBy": [
+         "Brett Gelman"
+      ]
    },
    {
       "name": "Billy Hargrove",
@@ -691,6 +756,44 @@
          "Dacre Montgomery",
          "Christopher Convery (child)"
       ],
-      "relationshipStatus": "undefined"
+      "relationshipStatus": "not mentioned",
+      "aliases": [
+         "not mentioned"
+      ],
+      "affiliation": [
+         "not mentioned"
+      ]
+   },
+   {
+      "name": "Robin Buckley",
+      "picture": "https://vignette.wikia.nocookie.net/strangerthings8338/images/f/fc/Robin_S3.png/revision/latest/scale-to-width-down/310?cb=20190409051202",
+      "status": "Alive",
+      "born": "1968",
+      "age": "17",
+      "aliases": [
+         "Tweedledee"
+      ],
+      "relationshipStatus": "Single",
+      "otherRelations": [
+         "Steve Harrington (best friend/co-worker/former classmate)",
+         "Dustin Henderson (friend)",
+         "Erica Sinclair (customer/friend)",
+         "Tammy Thompson (former love interest)"
+      ],
+      "affiliation": [
+         "Scoops Troop"
+      ],
+      "occupation": [
+         "Student at Hawkins High School (formerly; graduated)",
+         "Family Video employee",
+         "Scoops Ahoy employee (formerly)"
+      ],
+      "gender": "Female",
+      "portrayedBy": [
+         "Maya Hawke"
+      ],
+      "family": [
+         "not mentioned"
+      ]
    }
 ]

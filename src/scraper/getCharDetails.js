@@ -91,12 +91,13 @@ async function getDetails(character) {
          else {
             //console.log(label + " null")
          }
-      }  
-   }
-
-   details = checkProperty(details)
-   console.log(details)
-   //writeDataToFile(details)
+      } 
+      details = checkProperty(details)
+      //console.log(details)     // uncomment this when testing
+      writeDataToFile(details)   // make sure character.json file is empty, with only []. Comment when still testing
+   } else {
+      console.log("Error at getDetails func, labels array not the same size as values array.")
+   }  
 }
 
 // remove '[]' or '()' from the data
@@ -126,8 +127,10 @@ function splitData(string) {
                            .filter(item => { return item != "" })
       return arrayStr
    } else {
-      string = removeHref(string).trim()
-      return string
+      // we want the data to be consistent, since most data that are
+      // pass to this function will be array, we should convert the string as array.
+      let myArray = [removeHref(string).trim()]
+      return myArray
    }
 }
 
@@ -169,21 +172,22 @@ function removeHref(str) {
 }
 
 // some characters has unmentioned details, so we need to check and assign accordingly 
+// data should be consistent, eg., age is assigned as string, while aliases should be array
 function checkProperty(object) {
    if (!object.hasOwnProperty('age')) {
       object['age'] = 'not mentioned'
    }
    if (!object.hasOwnProperty('relationshipStatus')) {
       object['relationshipStatus'] = 'not mentioned'
-   } //aliases, family, affiliation
+   } 
    if (!object.hasOwnProperty('aliases')) {
-      object['aliases'] = 'not mentioned'
+      object['aliases'] = ['not mentioned']
    }
    if (!object.hasOwnProperty('family')) {
-      object['family'] = 'not mentioned'
+      object['family'] = ['not mentioned']
    }
    if (!object.hasOwnProperty('affiliation')) {
-      object['affiliation'] = 'not mentioned'
+      object['affiliation'] = ['not mentioned']
    }
 
    return object
