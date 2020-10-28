@@ -1,6 +1,6 @@
 const request = require('superagent');
 const { parse } = require('node-html-parser');
-const scrapeData = require('./scraper')
+const scrapeData = require('./getCharDetails')
 
 async function getCharacters() {
    const url = 'https://strangerthings.fandom.com/wiki/Stranger_Things_Wiki'
