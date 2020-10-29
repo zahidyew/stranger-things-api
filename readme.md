@@ -15,9 +15,8 @@ Currently there are two endpoints,
 1. GET ` /characters `
     Get all main characters in Stranger Things (22 characters based on the wiki)
 
-<br>
 2. GET ` /characters/:name `
-    Get the character(s) that match the :name 
+    Get the character(s) that match :name 
 <br>
  
-Probably will update with more endpoints in the near future and also add some relevant queries such as limits/status/age and etc..
+Probably will update with more endpoints in the near future and add some relevant queries such as limits/status/age and etc..
