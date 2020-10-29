@@ -3,7 +3,12 @@ const charactersData = require('../../data/character')
 
 const router = Router()
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) => {   
+   if (req.query.limit !== undefined ) {
+      const newArray = charactersData.slice(0, req.query.limit)
+      return res.json(newArray)
+   }
+
    res.json(charactersData)
 })
 
